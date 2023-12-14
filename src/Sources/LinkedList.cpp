@@ -60,16 +60,10 @@ void PrintList(const ForwardList& list) {
 void Reverse(ForwardList& list) {
 	ForwardList::Node* curr = list.Head;
 	ForwardList::Node* prev = nullptr;
-	ForwardList::Node* next = nullptr;
 	while (curr != nullptr) {
-		std::swap(curr, curr->Next);
-		curr = curr->Next;
-		/*next = curr->Next;
-		curr->Next = prev;
-		prev = curr;
-		curr = next;*/
-	}
-	list.Head = curr;
+		std::swap(curr->Next, prev)
+        	std::swap(curr, prev)
+        }
+        list.Head = curr;
 	delete curr;
-	delete next;
 }
